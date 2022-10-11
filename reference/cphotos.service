@@ -1,0 +1,14 @@
+[Unit]
+Description=CPhotos - ChrisPrime Photo and Video AutoArchival Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nohup /usr/local/bin/processmymediafoldersforarchive.sh
+Restart=always
+RestartSec=3600
+StandardOutput=null
+StandardError=file:/var/log/cphotoserror.log
+SyslogIdentifier=cphotos
+
+[Install]
+WantedBy=multi-user.target

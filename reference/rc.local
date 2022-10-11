@@ -1,0 +1,38 @@
+#!/bin/sh -e
+#
+# /etc/rc.local
+# Don't forget to sudo chmod +x /etc/rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+
+
+#Clear out the existing USB symlinks (my drive labels all start with P or M, and the || /bin/true suffix allows these commands to fail gracefully and continue) :
+rm -v /media/P* || /bin/true
+rm -v /media/M* || /bin/true
+
+#cycle through each /dev/sd? usb drive device and tell each to rerun connect scripts in sequence with delays
+sequentialUsbDriveStartup.sh
+
+#Start plex server after drives startup delay to ensure it doesn't catch old links
+service plexmediaserver start
+
+#Start syncthing service after drives startup to avoid issues as well
+systemctl start syncthing@pi.service
+
+#Start cphotos service after drives startup to avoid issues as well
+systemctl start cphotos.service
+
+exit 0
