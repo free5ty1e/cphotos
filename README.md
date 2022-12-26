@@ -193,6 +193,11 @@ screen -r
 ```
 
 
+### Moving Syncthing Folders to New Drive
+Shut down Syncthing, move the folder on disk (including the .stfolder marker), edit the path directly in `~/.config/syncthing/config.xml` and then start Syncthing again.
+
+
+
 
 
 
