@@ -198,11 +198,26 @@ Shut down Syncthing, move the folder on disk (including the .stfolder marker), e
 
 
 
+### Configuring a One-Way Phone Photo Sync
+The following is how to configure a one-way phone sync for your camera photos / videos to automatically dump onto your server in an appropriate location for CPhotos to notice and process / archive automatically.
+
+* Install the SyncThing app from the Play Store on your phone
+* Launch SyncThing and run through setup wizard.  You will end up with a default "Camera" sync folder to start with
+* Go to the "Devices" tab and click the plus + button in the top right to add a device
+* Choose to scan QR code (QR icon next to device ID field)
+* Open the SyncThing web management UI in your computer's web browser ( https://192.168.100.110:8384/# )
+* In the Actions menu in the top right, click the Show Id option to show the QR code for your server device
+* On your phone, scan the QR code with SyncThing to add your server device
+* On your computer, in the web management UI, a message will appear saying that your new device wants to add itself to the server.  Click Add Device to bring up the Add Device dialog to configure the new device.  Give it a name and save it with default settings.
+* See screenshots below documenting how to configure the phone sync folder and the server side sync folder to 
 
 
 
 ### NOTES:
-Initial "Google Photos" downloaded media total 377GB for my collection.  Will post after results once CPhotos has a chance to fully process this entire collection to HD resolution, any videos to h.265 with compression rate factor 34, any JPEGs optimized and shrunk, any non-GIF imagery shrunk.  JSON files copied over intact for any metadata I might want.
+My Google Photos / GPhotos downloaded media total 377GB for my collection of photos and videos I had uploaded over the course of 10-15 years.  This would have required 16 BD-R media for long-term storage.
+
+With CPhotos, this collection shrank down to 34GB -- which fit on 2 BD-R media!
+
 
 
 CPhotos service extracted from https://github.com/free5ty1e/debianusbfileserver/blob/master/README.md 2022.10
