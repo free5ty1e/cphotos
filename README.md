@@ -209,8 +209,28 @@ The following is how to configure a one-way phone sync for your camera photos / 
 * In the Actions menu in the top right, click the Show Id option to show the QR code for your server device
 * On your phone, scan the QR code with SyncThing to add your server device
 * On your computer, in the web management UI, a message will appear saying that your new device wants to add itself to the server.  Click Add Device to bring up the Add Device dialog to configure the new device.  Give it a name and save it with default settings.
-* See screenshots below documenting how to configure the phone sync folder and the server side sync folder to 
+* See screenshots below documenting how to configure the phone sync folder and the server side sync folder:
+![PhoneSyncAndroidCameraTop](images/PhoneSyncAndroidCameraTop.jpg)
 
+![PhoneSyncPicturesFromAppsTop](images/PhoneSyncPicturesFromAppsTop.jpg)
+
+![PhoneSyncBottom](images/PhoneSyncBottom.jpg)
+
+![PhoneFileserverDeviceSetup](images/PhoneFileserverDeviceSetup.jpg)
+
+![ServerWebInterface](images/ServerWebInterface.png)
+
+![ServerAndroidCameraConfig](images/ServerAndroidCameraConfig.png)
+
+![ServerPicturesFromAppsConfig](images/ServerPicturesFromAppsConfig.png)
+
+![ServerPicturesFromAppsSettings1of4](images/ServerPicturesFromAppsSettings1of4.png)
+
+![ServerPicturesFromAppsSettings2of4](images/ServerPicturesFromAppsSettings2of4.png)
+
+![ServerPicturesFromAppsSettings3of4](images/ServerPicturesFromAppsSettings3of4.png)
+
+![ServerPicturesFromAppsSettings4of4](images/ServerPicturesFromAppsSettings4of4.png)
 
 
 ### NOTES:
